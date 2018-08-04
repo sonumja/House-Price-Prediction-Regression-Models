@@ -24,3 +24,6 @@ y_pred.shape=(4323,1)
 #Assessing the quality of fit
 from sklearn.metrics import r2_score
 print ('R-squared score for this model is ',r2_score(y_test, y_pred))
+
+for x in range(len(y_pred)):
+    print('Actual ',y_test[x],' Predicted ',y_pred[x])

@@ -20,6 +20,9 @@ regressor.fit(X_train, y_train)
 # Predicting a new result
 y_pred = regressor.predict(X_test)
 
+for x in range(len(y_pred)):
+    print('Actual ',y_test[x],' Predicted ',y_pred[x])
+    
 #Assessing the quality of fit
 from sklearn.metrics import r2_score
 print ('R-squared score for this model is ',r2_score(y_test,y_pred))
